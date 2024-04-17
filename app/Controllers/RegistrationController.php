@@ -42,7 +42,6 @@ class RegistrationController extends BaseController
             $otp = rand(100000, 999999);
             $data_otp = [
                 'user_id' => $user_id,
-                'email' => $email,
                 'otp' => $otp,
                 'expire' => $expire
             ];
@@ -75,6 +74,12 @@ class RegistrationController extends BaseController
                     'message' => 'OTP telah dikirim ke whatsapp anda!'
                 ]);
             }
+        } else {
+            $this->response->setStatusCode(400, 'Bad Request');
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Registrasi Gagal'
+            ]);
         }
     }
 }
