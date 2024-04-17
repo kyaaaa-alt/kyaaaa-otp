@@ -10,8 +10,16 @@ class VerifyController extends BaseController
         $this->VerifyModel = new VerifyModel();
     }
 
-    public function index(): string
+    public function index()
     {
+        if (!session()->has('logged_in')) {
+            return redirect()->to('/');
+        }
+        $user = $this->VerifyModel->get_user_by_id(session()->get('user_id'));
+        $data = [
+          'title' => 'OTP Verification',
+          'user' => $user,
+        ];
         return view('VerificationView');
     }
 
