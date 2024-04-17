@@ -15,18 +15,17 @@
         </div>
         <form name="register">
             <div class="card-body">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-                    <label for="phone">Username</label>
-                    <input type="username" id="username" name="username" required>
+                <label for="phone">Username</label>
+                <input type="username" id="username" name="username" required>
 
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
             </div>
             <div class="card-footer">
                 <button type="submit">Register</button>
