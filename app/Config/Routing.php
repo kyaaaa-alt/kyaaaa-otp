@@ -29,7 +29,9 @@ class Routing extends BaseRouting
      * @var list<string>
      */
     public array $routeFiles = [
-        APPPATH . 'Config/Routing/otp_routes.php',
+        APPPATH . 'Config/Routing/registration_routes.php',
+        APPPATH . 'Config/Routing/verify_routes.php',
+        APPPATH . 'Config/Routing/whatsapp_routes.php',
     ];
 
     /**

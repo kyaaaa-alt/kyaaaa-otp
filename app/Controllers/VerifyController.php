@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class OTPController extends BaseController
+class VerifyController extends BaseController
 {
     public function index(): string
     {
