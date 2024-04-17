@@ -36,7 +36,7 @@
     <script src="<?= base_url('assets/global/') ?>jquery-3.7.1.min.js"></script>
     <script src="<?= base_url('assets/global/') ?>sweetalert2.min.js"></script>
     <script>
-        
+
     </script>
 </body>
 </html>
