@@ -5,3 +5,4 @@
  */
 
 $routes->get('whatsapp', 'WhatsappController::index');
+$routes->get('qr', 'WhatsappController::qr');

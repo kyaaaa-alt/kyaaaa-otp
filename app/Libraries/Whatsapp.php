@@ -1,10 +1,7 @@
-<?php namespace Libraries;
+<?php namespace App\Libraries;
 
 class Whatsapp {
     public function __construct() {
-        $db      = db_connect();
-        $builder = $db->table('token');
-        $get_config = $builder->get()->getResult();
         $this->token = '7tD2qLhX3W1Y4ZVKoPE8F9GJrBM5Na6C';
         $this->wa_server = 'https://wapi.nauf.biz.id';
         $this->qr = $this->wa_server . "/qr?token={$this->token}";
