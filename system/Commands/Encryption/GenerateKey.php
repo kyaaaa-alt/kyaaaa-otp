@@ -101,7 +101,7 @@ class GenerateKey extends BaseCommand
         // force DotEnv to reload the new env vars
         putenv('encryption.key');
         unset($_ENV['encryption.key'], $_SERVER['encryption.key']);
-        $dotenv = new DotEnv(ROOTPATH);
+        $dotenv = new DotEnv(WRITEPATH);
         $dotenv->load();
 
         CLI::write('Application\'s new encryption key was successfully set.', 'green');
