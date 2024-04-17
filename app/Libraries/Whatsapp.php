@@ -3,7 +3,7 @@
 class Whatsapp {
     public function __construct() {
         $this->token = '7tD2qLhX3W1Y4ZVKoPE8F9GJrBM5Na6C';
-        $this->wa_server = 'https://wapi.nauf.biz.id';
+        $this->wa_server = 'http://192.168.0.210:8300';
         $this->qr = $this->wa_server . "/qr?token={$this->token}";
         $this->send = $this->wa_server . "/send-message?token={$this->token}";
         $this->group_send = $this->wa_server . "/group-message?token={$this->token}";
