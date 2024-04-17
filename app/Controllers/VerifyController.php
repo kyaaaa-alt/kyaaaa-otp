@@ -20,7 +20,7 @@ class VerifyController extends BaseController
           'title' => 'OTP Verification',
           'user' => $user,
         ];
-        return view('VerificationView');
+        return view('VerificationView', $data);
     }
 
     public function verify()
