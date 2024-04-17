@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class RegistraionController extends BaseController
+class RegistrationController extends BaseController
 {
     public function index(): string
     {
@@ -11,6 +11,6 @@ class RegistraionController extends BaseController
 
     public function submit()
     {
-        
+
     }
 }
