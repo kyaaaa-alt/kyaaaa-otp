@@ -11,11 +11,8 @@
 </head>
 <body>
     <div class="card">
-        <div class="card-header">
-            <h2>Whatsapp</h2>
-        </div>
         <div class="card-body">
-            <div class="text-center">
+            <div style="margin: 0 auto;text-align: center">
                 <div id="connected" style="display: none">
                     <h1 style="font-size: 100px;" class="text-primary"><i class="fa fa-check-circle"></i> </h1>
                     <h5><span class="badge bg-primary text-white font-weight-light">Notifikasi Whatsapp Online!</span></h5>
