@@ -44,7 +44,7 @@
                 }
             })
             $.ajax({
-                url: '<?= base_url('verify') ?>',
+                url: '<?= base_url('verification') ?>',
                 type: 'POST',
                 data: $(this).serialize(),
                 dataType: 'json',
