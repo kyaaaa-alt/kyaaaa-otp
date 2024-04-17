@@ -6,7 +6,10 @@ class RegistrationController extends BaseController
 {
     public function index(): string
     {
-        return view('RegistrationView');
+        $data = [
+          'title' => 'Register'
+        ];
+        return view('RegistrationView', $data);
     }
 
     public function submit()
