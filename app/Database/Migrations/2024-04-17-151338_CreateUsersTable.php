@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
             ],
-            'username' => [
+            'whatsapp' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
             ],
