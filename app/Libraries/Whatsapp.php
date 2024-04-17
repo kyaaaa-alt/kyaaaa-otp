@@ -18,12 +18,6 @@ class Whatsapp {
             return $response;
         }
 
-        if ($this->wa_server == false) {
-            $response = new \stdClass();
-            $response->message = 'Disabled';
-            return $response;
-        }
-
         $curl = curl_init();
 
         curl_setopt_array($curl, [
@@ -46,18 +40,6 @@ class Whatsapp {
             $response = new \stdClass();
             $response->message = 'Token not found';
             return $response;
-        }
-
-        if ($this->wa_server == false) {
-            $response = new \stdClass();
-            $response->message = 'Disabled';
-            return $response;
-        }
-
-        switch ($number) {
-            default:
-                $number = $number;
-                break;
         }
 
         $data = [
@@ -87,18 +69,6 @@ class Whatsapp {
             $response = new \stdClass();
             $response->message = 'Token not found';
             return $response;
-        }
-
-        if ($this->wa_server == false) {
-            $response = new \stdClass();
-            $response->message = 'Disabled';
-            return $response;
-        }
-
-        switch ($group) {
-            default:
-                $group = $group;
-                break;
         }
 
         $data = [
