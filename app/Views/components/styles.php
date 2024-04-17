@@ -42,6 +42,7 @@
 
     label {
         margin-bottom: 8px;
+        display: block;
     }
 
     input {
