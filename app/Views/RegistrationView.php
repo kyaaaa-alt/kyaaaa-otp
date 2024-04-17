@@ -62,7 +62,7 @@
                             title: 'Registrasi Berhasil',
                             text: response.message
                         }).then((result) => {
-                            location.href = '<?= base_url('verify') ?>'
+                            location.href = '<?= base_url('verification') ?>'
                         })
                     } else {
                         Swal.fire({

@@ -11,18 +11,28 @@
 <body>
     <div class="card">
         <div class="card-header">
-            <h2>Registration</h2>
+            <h2>Verifikasi</h2>
         </div>
         <form name="verify">
             <div class="card-body">
                 <p>Name : <?= esc($user->name) ?></p>
-                <p>Status : <?= esc($user->email) == 1 ? 'Verified' : 'Unverified' ?></p>
+                <p>Status : <?= esc($user->status) == 1 ? 'Verified' : 'Unverified' ?></p>
+                <?php if (esc($user->status) == 0) { ?>
                 <label for="name">OTP</label>
                 <input type="text" id="otp" name="otp" required>
+                <?php } ?>
             </div>
+            <?php if (esc($user->status) == 0) { ?>
             <div class="card-footer">
                 <button type="submit">Verify</button>
             </div>
+            <?php } else { ?>
+
+            <div class="card-footer">
+                <a type="button" href="<?= base_url('destroy') ?>">Destroy Session</a>
+            </div>
+
+            <?php } ?>
         </form>
     </div>
     <script src="<?= base_url('assets/global/') ?>jquery-3.7.1.min.js"></script>
@@ -44,7 +54,7 @@
                 }
             })
             $.ajax({
-                url: '<?= base_url('verification') ?>',
+                url: '<?= base_url('verify') ?>',
                 type: 'POST',
                 data: $(this).serialize(),
                 dataType: 'json',

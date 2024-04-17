@@ -6,3 +6,8 @@
 
 $routes->get('verification', 'VerifyController::index');
 $routes->post('verify', 'VerifyController::verify');
+
+$routes->get('destroy', function () {
+    session()->destroy();
+    return redirect()->to('/');
+});
